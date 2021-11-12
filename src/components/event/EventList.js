@@ -40,7 +40,14 @@ export const EventList = () => {
                                 : <button className="btn btn-2"
                                     onClick={() => joinEvent(event.id).then(() => eventFetcher())}
                                     >Join</button>
+
+                                    
                         }
+                         <button className="btn btn-2 btn-sep icon-create"
+                            onClick={() => {
+                                history.push({ pathname: `/events/${event.id}/updateForm` })
+                            }}
+                        >Update</button>
                     </section>
                 })
             }
